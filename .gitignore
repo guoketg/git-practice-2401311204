@@ -1,0 +1,92 @@
+# ==================== RAG 项目专属忽略 ====================
+# 1. 原始文档/知识库文件（PDF、Word、Excel、Txt、Markdown 等）
+# 这些文件体积大、涉密，绝对不要提交到 Git
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.txt
+*.md
+*.csv
+*.json
+*.xml
+*.html
+*.htm
+*.epub
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# 2. 向量数据库文件（Chroma/FAISS/Pinecone 本地存储）
+# 向量库索引文件，体积极大，无需版本管理
+chroma/
+chroma_db/
+faiss_index/
+faiss/
+vector_store/
+vectors/
+index.faiss
+index.pkl
+*.index
+*.bin
+
+# 3. 嵌入模型/大模型本地缓存文件
+# 本地下载的 Embedding 模型、LLM 模型权重（体积 GB 级）
+models/
+model/
+embedding_model/
+llm_model/
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.h5
+
+# ==================== 环境与敏感信息 ====================
+# 4. 环境变量（API Key、密钥、数据库密码）
+.env
+.env.*
+!.env.example
+secrets/
+secret/
+config.yaml
+config.yml
+
+# 5. Python 虚拟环境
+venv/
+.venv/
+env/
+.env/
+virtualenv/
+pip-wheel-metadata/
+
+# ==================== 临时文件/缓存/日志 ====================
+# 6. 文档解析/处理中间缓存
+parsed_docs/
+processed_docs/
+cache/
+*.cache
+tmp/
+temp/
+
+# 7. 日志文件
+logs/
+*.log
+*.log.*
+
+# 8. Python 编译文件、IDE 配置
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
